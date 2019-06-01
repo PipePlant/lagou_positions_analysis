@@ -7,8 +7,9 @@ import re
 plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
 plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
 
-file = './lagou_data.csv'
+csv_path = './csvs/'
 image_path = './images/'
+file = csv_path+'lagou_data.csv'
 # 读取文件
 df = pd.read_csv(file,encoding='gbk')
 

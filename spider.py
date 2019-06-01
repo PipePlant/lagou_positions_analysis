@@ -12,8 +12,8 @@ headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)',
         'Referer': 'https://www.lagou.com/jobs/list_%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90?city=%E5%85%A8%E5%9B%BD&cl=false&fromSearch=true&labelWords=&suginput=&labelWords=hot', # 从浏览器上拉一个下来
     }
-
-with open('./lagou_data.csv','w',encoding='gbk',newline='') as fd:
+csv_path = './csvs/'
+with open(csv_path +'lagou_data.csv','w',encoding='gbk',newline='') as fd:
     csv_write = csv.writer(fd)
     title = ['id','职位','城市','学历','工作年限','薪资','第一标签','第二标签','第三标签','技能库','公司名称','融资阶段','公司规模']
     csv_write.writerow(title)
