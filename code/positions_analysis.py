@@ -3,12 +3,13 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import re
+from wordcloud import WordCloud
 
 plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
 plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
 
 csv_path = '../csvs/'
-image_path = './images/'
+image_path = '../images/'
 file = csv_path+'lagou_data.csv'
 # 读取文件
 df = pd.read_csv(file,encoding='gbk')
@@ -122,5 +123,20 @@ plt.legend(patches,labels,loc='right',bbox_to_anchor=(1.1,1.1),fontsize=8) # 设
 plt.title("个人情况-职位数量",fontsize=15,x=-0.1,y=1.1) # 设置title
 
 plt.savefig(image_path+'person_info_positions.png',bbox_inches='tight')
+
+'''获取技能词云'''
+plt.figure(dpi=128,figsize=(10, 6))
+wc_data = df['技能库']
+wc_list = []
+for skill in wc_data:
+    pattern = re.compile(r"'(.+?)'",re.I)
+    result = pattern.findall(skill)
+    wc_list.extend(result)
+wc_text = ' '.join(wc_list)
+wc = WordCloud(background_color="white",width=1000, height=700, margin=2,font_path = 'C:\\windows\\Fonts\\simhei.ttf').generate(wc_text)
+plt.imshow(wc)
+plt.axis("off")
+
+wc.to_file(image_path+'skills.png')
 
 plt.show()
