@@ -9,13 +9,13 @@
 
 ## 城市与职位数量关系
 
-![image](https://raw.githubusercontent.com/PipePlant/lagou_positions_analysis/master/images/city_positions.png?raw=true)
+![image](./images/city_positions.png?raw=true)
 
 &emsp;&emsp;根据分析结果，数据分析岗位在东部沿海城市的需求量远高于国内其他地区，基本以北上深杭广为主，契合现今互联网公司的分布情况。
 
 ## 薪资与职位数量关系
 
-![image](https://raw.githubusercontent.com/PipePlant/lagou_positions_analysis/master/images/salary_positions.png)
+![image](./images/salary_positions.png)
 
 &emsp;&emsp;基于所获得的薪资数据为一个区间，且区间跨度有大有小，实则无法直接进行统计。根据分析结果，将区间最大值和最小值加权粗略计算为一个定值。
 
@@ -23,7 +23,7 @@
 
 ## 公司情况与职位数量关系
 
-![image](https://raw.githubusercontent.com/PipePlant/lagou_positions_analysis/master/images/company_positions.png)
+![image](./images/company_positions.png)
 
 &emsp;&emsp;本次统计，将公司规模和融资阶段组成在一张图表中，以体现公司情况和职位的关系。
 
@@ -33,14 +33,14 @@
 
 ## 学历、工作经验与职位数量关系
 
-![image](https://raw.githubusercontent.com/PipePlant/lagou_positions_analysis/master/images/person_info_positions.png)
+![image](./images/person_info_positions.png)
 
 &emsp;&emsp;根据分析结果，数据分析岗位对学历的需求，主要集中在本科及以上，达到了87%以上。
 
 &emsp;&emsp;根据分析结果，数据分析岗位对工作经验的需求，主要集中在1-3年和3-5年。
 
 ## 技能词云
-![image](https://raw.githubusercontent.com/PipePlant/lagou_positions_analysis/master/images/skills.png)
+![image](./images/skills.png)
 
 &emsp;&emsp;该图例反映了本次统计了招聘信息内的技能需求优先程度。
 
